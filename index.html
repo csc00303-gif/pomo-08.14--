@@ -1,28 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pomodoro Timer</title>
-  <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-  <main class="timer-card">
-    <a class="settings-btn" href="setting.html" aria-label="설정">⚙</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>넥스텝 컴퓨터 아카데미 학원</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="timer-card">
+      <a class="settings-btn" href="setting.html" aria-label="설정">⚙</a>
 
-    <h1>pomodoro</h1>
+      <h1>pomodoro</h1>
 
-    <p class="clock" id="clock">오후 2:40</p>
+      <p class="clock" id="clock">오후 2:40</p>
 
-    <p class="time-left" id="time-left">25:00</p>
+      <p class="time-left" id="time-left">25:00</p>
 
-    <div class="controls">
-      <button class="btn btn-start" type="button" onclick="startTimer()">시작</button>
-      <button class="btn btn-stop" type="button" onclick="stopTimer()">정지</button>
-      <button class="btn btn-reset" type="button" onclick="resetTimer()">초기화</button>
-    </div>
-  </main>
+      <div class="controls">
+        <button class="btn btn-start" type="button" onclick="startTimer()">
+          시작
+        </button>
+        <button class="btn btn-stop" type="button" onclick="stopTimer()">
+          정지
+        </button>
+        <button class="btn btn-reset" type="button" onclick="resetTimer()">
+          초기화
+        </button>
+      </div>
+    </main>
 
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
