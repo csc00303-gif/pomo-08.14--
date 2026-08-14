@@ -13,6 +13,19 @@ let remainingSeconds = getSavedMinutes() * 60;
 let timerId = null;
 
 const timeLeftEl = document.getElementById("time-left");
+const clockEl = document.getElementById("clock");
+
+function formatClock(date) {
+  const period = date.getHours() < 12 ? "오전" : "오후";
+  const hours = date.getHours() % 12 || 12;
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+  const seconds = String(date.getSeconds()).padStart(2, "0");
+  return `${period} ${hours}:${minutes}:${seconds}`;
+}
+
+function updateClock() {
+  clockEl.textContent = formatClock(new Date());
+}
 
 function formatTime(totalSeconds) {
   const minutes = Math.floor(totalSeconds / 60);
@@ -49,3 +62,5 @@ function resetTimer() {
 }
 
 updateDisplay();
+updateClock();
+setInterval(updateClock, 1000);
